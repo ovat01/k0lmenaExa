@@ -15,16 +15,16 @@ Given('User navigates to the LetCode form page', async () => {
 
 When('User fills all the fields with valid data', async function () {
   for (const page of pages) {
-    await page.locator(formLocators.firstName).fill('John');
-    await page.locator(formLocators.lastName).fill('Doe');
-    await page.locator(formLocators.email).fill('johndoe@example.com');
+    await page.locator(formLocators.firstName).fill('Julian');
+    await page.locator(formLocators.lastName).fill('Ordens');
+    await page.locator(formLocators.email).fill('demo@example.com');
     await page.locator(formLocators.countryCode).selectOption({ label: 'USA (+1)' });
     await page.locator(formLocators.phoneNumber).fill('1234567890');
     await page.locator(formLocators.addressLine1).fill('123 Main St');
     await page.locator(formLocators.addressLine2).fill('Apt 4B');
-    await page.locator(formLocators.state).fill('California');
+    await page.locator(formLocators.state).fill('Santiago');
     await page.locator(formLocators.postalCode).fill('90210');
-    await page.locator(formLocators.country).selectOption({ label: 'United States' });
+    await page.locator(formLocators.country).selectOption({ label: 'Chile' });
     await page.locator(formLocators.dob).fill('1990-01-01');
     await page.locator(formLocators.genderMale).check();
   }
@@ -65,15 +65,15 @@ Then('An invalid email error message should be displayed', async function () {
 
 When('User fills all the fields with valid data except for the first name', async function () {
   for (const page of pages) {
-    await page.locator(formLocators.lastName).fill('Doe');
-    await page.locator(formLocators.email).fill('johndoe@example.com');
+    await page.locator(formLocators.lastName).fill('Ordens');
+    await page.locator(formLocators.email).fill('demo@example.com');
     await page.locator(formLocators.countryCode).selectOption({ label: 'USA (+1)' });
     await page.locator(formLocators.phoneNumber).fill('1234567890');
     await page.locator(formLocators.addressLine1).fill('123 Main St');
     await page.locator(formLocators.addressLine2).fill('Apt 4B');
-    await page.locator(formLocators.state).fill('California');
+    await page.locator(formLocators.state).fill('Santiago');
     await page.locator(formLocators.postalCode).fill('90210');
-    await page.locator(formLocators.country).selectOption({ label: 'United States' });
+    await page.locator(formLocators.country).selectOption({ label: 'Chile' });
     await page.locator(formLocators.dob).fill('1990-01-01');
     await page.locator(formLocators.genderMale).check();
   }
@@ -97,16 +97,16 @@ Then('A terms and conditions error message should be displayed', async function 
 
 When('User fills only the required fields with valid data', async function () {
     for (const page of pages) {
-        await page.locator(formLocators.firstName).fill('John');
-        await page.locator(formLocators.lastName).fill('Doe');
-        await page.locator(formLocators.email).fill('johndoe@example.com');
+        await page.locator(formLocators.firstName).fill('Julian');
+        await page.locator(formLocators.lastName).fill('Ordens');
+        await page.locator(formLocators.email).fill('demo@example.com');
         await page.locator(formLocators.countryCode).selectOption({ label: 'USA (+1)' });
         await page.locator(formLocators.phoneNumber).fill('1234567890');
         await page.locator(formLocators.addressLine1).fill('123 Main St');
         await page.locator(formLocators.addressLine2).fill('Apt 4B');
-        await page.locator(formLocators.state).fill('California');
+        await page.locator(formLocators.state).fill('Santiago');
         await page.locator(formLocators.postalCode).fill('90210');
-        await page.locator(formLocators.country).selectOption({ label: 'United States' });
+        await page.locator(formLocators.country).selectOption({ label: 'Chile' });
         await page.locator(formLocators.dob).fill('1990-01-01');
         await page.locator(formLocators.genderMale).check();
     }
